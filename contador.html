@@ -1,0 +1,53 @@
+contador.html)
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador de clics</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    #contador {
+      font-size: 2em;
+      color: #e91e63;
+      font-weight: bold;
+    }
+    button {
+      background-color: #4a148c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6a1b9a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contador de clics</h1>
+  <p>Has hecho <span id="contador">0</span> clics</p>
+  <button id="boton">Haz clic aquí</button>
+
+  <script>
+    let clics = 0; // Variable para contar
+
+    const boton = document.getElementById('boton');
+    const contador = document.getElementById('contador');
+
+    boton.addEventListener('click', () => {
+      clics++;
+      contador.textContent = clics;
+    });
+  </script>
+</body>
+</html>
